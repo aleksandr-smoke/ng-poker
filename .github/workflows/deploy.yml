@@ -17,6 +17,6 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           port: ${{ secrets.VPS_PORT }}
           key: ${{ secrets.VPS_PRIVATE_KEY }}
-          source: "./static"
+          source: "static/*"
           target: "/root/poker/nginx/poker"
 

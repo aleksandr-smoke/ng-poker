@@ -19,3 +19,5 @@ jobs:
           strip_components: 1
           rm: true
 
+      - name: Correct access rights
+        run: chmod -R 755 /root/poker/nginx/poker

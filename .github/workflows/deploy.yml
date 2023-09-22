@@ -7,9 +7,6 @@ jobs:
       - name: Checkout the repo
         uses: actions/checkout@v4
 
-      - name: Clear folder
-        run: "rm -rf /root/poker/nginx/poker"
-
       - name: Copy app bundle
         uses: appleboy/scp-action@master
         with:

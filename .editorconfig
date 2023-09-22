@@ -11,3 +11,6 @@ trim_trailing_whitespace = true
 
 [*.ts]
 quote_type = single
+
+[*.{json,yml}]
+indent_size = 2

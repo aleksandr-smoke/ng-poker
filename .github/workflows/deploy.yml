@@ -16,11 +16,11 @@ jobs:
         run: npm install --no-package-lock && npm run build
 
       - name: Deploy
-        uses: easingthemes/ssh-deploy@main
+        uses: easingthemes/ssh-deploy@4.1.9
         with:
-            SSH_PRIVATE_KEY: ${{ secrets.VPS_PRIVATE_KEY }}
-            ARGS: "-rlgoDzvc -i --delete"
-            SOURCE: "dist/ng-poker/"
-            TARGET: "/root/poker/nginx/poker"
-            REMOTE_HOST: ${{ secrets.VPS_HOST }}
-            REMOTE_USER: ${{ secrets.VPS_USERNAME }}
+          REMOTE_HOST: ${{ secrets.VPS_HOST }}
+          REMOTE_USER: ${{ secrets.VPS_USERNAME }}
+          SSH_PRIVATE_KEY: ${{ secrets.VPS_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "dist/ng-poker/"
+          TARGET: "/root/poker/nginx/poker"

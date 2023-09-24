@@ -1,13 +1,16 @@
 <tui-root>
-    <div>{{ deck.toString() }}</div>
-    <button
-        (click)="shuffle()"
-        tuiButton
-        appearance="secondary"
-        type="button"
-        size="m"
-        class="tui-space_top-3"
-    >
-        Shuffle!
-    </button>
+    <img src="assets/img/holy.jpg" width="100%" height="auto" alt="holy">
+    <ng-container *ngIf="false">
+        <div>{{ deck.toString() }}</div>
+        <button
+            (click)="shuffle()"
+            tuiButton
+            appearance="secondary"
+            type="button"
+            size="m"
+            class="tui-space_top-3"
+        >
+            Shuffle!
+        </button>
+    </ng-container>
 </tui-root>

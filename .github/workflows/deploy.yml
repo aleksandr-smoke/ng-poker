@@ -1,0 +1,31 @@
+name: Deploy
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+
+      - name: Install Node
+        uses: actions/setup-node@v3.8.1
+        with:
+          node-version: 18
+
+      - name: Build app
+        run: npm install --no-package-lock && npm run build
+
+      - name: Deploy
+        uses: easingthemes/ssh-deploy@main
+        with:
+          REMOTE_HOST: ${{ secrets.VPS_HOST }}
+          REMOTE_USER: ${{ secrets.VPS_USERNAME }}
+          SSH_PRIVATE_KEY: ${{ secrets.VPS_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "dist/ng-poker/"
+          TARGET: "/root/poker/nginx/poker"
+        if: github.event_name != 'pull_request'

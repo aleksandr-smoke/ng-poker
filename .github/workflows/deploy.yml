@@ -13,7 +13,7 @@ jobs:
           node-version: 18
 
       - name: Build app
-        run: npm i && npm run build
+        run: npm install --no-package-lock && npm run build
 
       - name: Copy app bundle
         uses: appleboy/scp-action@master

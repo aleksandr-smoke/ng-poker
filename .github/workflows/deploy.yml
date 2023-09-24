@@ -16,7 +16,7 @@ jobs:
         run: npm install --no-package-lock && npm run build
 
       - name: Deploy
-        uses: easingthemes/ssh-deploy@4.1.9
+        uses: easingthemes/ssh-deploy@main
         with:
           REMOTE_HOST: ${{ secrets.VPS_HOST }}
           REMOTE_USER: ${{ secrets.VPS_USERNAME }}

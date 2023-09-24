@@ -22,7 +22,7 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           port: ${{ secrets.VPS_PORT }}
           key: ${{ secrets.VPS_PRIVATE_KEY }}
-          source: "dist/"
+          source: "dist/ng-poker"
           target: "/root/poker/nginx/poker"
           strip_components: 1
           overwrite: true

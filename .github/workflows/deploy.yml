@@ -17,3 +17,4 @@ jobs:
           source: "static/"
           target: "/root/poker/nginx/poker"
           strip_components: 1
+          overwrite: true

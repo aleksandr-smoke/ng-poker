@@ -31,7 +31,11 @@
             "style": "kebab-case"
           }
         ],
-        "no-unused-vars": "off"
+        "no-unused-vars": "off",
+        "no-useless-escape": "off",
+        "comma-dangle": ["error", "always-multiline"],
+        "semi": [2, "always"],
+        "@typescript-eslint/no-non-null-assertion": "off"
       }
     },
     {

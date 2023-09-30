@@ -1,0 +1,48 @@
+Poker Hand #HD1411318143: Hold'em No Limit ($0.01/$0.02) - 2023/09/18 01:32:38
+Table 'NLHYellow7' 6-max Seat #6 is the button
+Seat 1: 82e8e28f ($2 in chips)
+Seat 2: 5e79d3a1 ($6.32 in chips)
+Seat 3: ca75961 ($4.29 in chips)
+Seat 4: dbec7c55 ($0.71 in chips)
+Seat 5: 731c9661 ($3.18 in chips)
+Seat 6: Hero ($2.52 in chips)
+82e8e28f: posts small blind $0.01
+5e79d3a1: posts big blind $0.02
+*** HOLE CARDS ***
+Dealt to 82e8e28f
+Dealt to 5e79d3a1
+Dealt to ca75961
+Dealt to dbec7c55
+Dealt to 731c9661
+Dealt to Hero [8s 9s]
+ca75961: folds
+dbec7c55: folds
+731c9661: raises $0.03 to $0.05
+Hero: calls $0.05
+82e8e28f: folds
+5e79d3a1: folds
+*** FLOP *** [6h 6s 8d]
+731c9661: bets $0.05
+Hero: raises $0.18 to $0.23
+731c9661: raises $0.45 to $0.68
+Hero: calls $0.45
+*** TURN *** [6h 6s 8d] [9d]
+731c9661: bets $1.49
+Hero: calls $1.49
+*** RIVER *** [6h 6s 8d 9d] [Th]
+731c9661: bets $0.96 and is all-in
+Hero: calls $0.3 and is all-in
+Uncalled bet ($0.66) returned to 731c9661
+731c9661: shows [Ad 9c] (Pair of Nines and Pair of Sixes)
+Hero: shows [8s 9s] (Pair of Nines and Pair of Eights)
+*** SHOWDOWN ***
+Hero collected $4.85 from pot
+*** SUMMARY ***
+Total pot $5.07 | Rake $0.2 | Jackpot $0.02 | Bingo $0 | Fortune $0 | Tax $0
+Board [6h 6s 8d 9d Th]
+Seat 1: 82e8e28f (small blind) folded before Flop
+Seat 2: 5e79d3a1 (big blind) folded before Flop
+Seat 3: ca75961 folded before Flop (didn't bet)
+Seat 4: dbec7c55 folded before Flop (didn't bet)
+Seat 5: 731c9661 showed [Ad 9c] and lost with Pair of Nines and Pair of Sixes
+Seat 6: Hero (button) showed [8s 9s] and won ($4.85) with Pair of Nines and Pair of Eights

@@ -1,32 +1,21 @@
-import { CardRank, cardRanksStringified } from './card-rank';
-import { CardSuit, cardSuitsStringified } from './card-suit';
+import { CardRank, stringToCardRank } from './card-rank';
+import { CardSuit, stringToCardSuit } from './card-suit';
 
 export class Card {
-    public static readonly ranks: CardRank[] = [
-        CardRank.Two,
-        CardRank.Three,
-        CardRank.Four,
-        CardRank.Five,
-        CardRank.Six,
-        CardRank.Seven,
-        CardRank.Eight,
-        CardRank.Nine,
-        CardRank.Ten,
-        CardRank.Jack,
-        CardRank.Queen,
-        CardRank.King,
-        CardRank.Ace,
-    ];
-    public static readonly suits: CardSuit[] = [
-        CardSuit.Clubs,
-        CardSuit.Diamonds,
-        CardSuit.Hearts,
-        CardSuit.Spades,
-    ];
-
     constructor(private rank: CardRank, private suit: CardSuit) {}
 
+    public static fromString(card: string): Card {
+        const rank: CardRank | undefined = stringToCardRank[card[0]];
+        const suit: CardSuit | undefined = stringToCardSuit[card[1]];
+
+        if (!(card.length === 2 && rank && suit)) {
+            throw new Error(`Invalid card string format: ${card}`);
+        }
+
+        return new Card(rank, suit);
+    }
+
     public toString(): string {
-        return `${cardRanksStringified[this.rank]}${cardSuitsStringified[this.suit]}`;
+        return `${this.rank}${this.suit}`;
     }
 }

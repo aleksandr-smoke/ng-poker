@@ -1,5 +1,13 @@
+<tui-theme-night *ngIf="false"></tui-theme-night>
 <tui-root>
-    <img src="assets/img/holy.jpg" width="100%" height="auto" alt="holy">
+    <div class="grid">
+        <div class="importer">
+            <app-import-hands (parsed)="saveHands($event)"></app-import-hands>
+        </div>
+        <div class="parsed">
+            <pre>{{ JSON.stringify(hands, null, 4) }}</pre>
+        </div>
+    </div>
     <ng-container *ngIf="false">
         <div>{{ deck.toString() }}</div>
         <button

@@ -34,6 +34,7 @@
     "@taiga-ui/layout": "^3.44.1",
     "@taiga-ui/styles": "^3.44.1",
     "@tinkoff/ng-dompurify": "3.0.0",
+    "date-fns": "^2.30.0",
     "dompurify": "2.2.9",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

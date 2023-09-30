@@ -1,7 +1,7 @@
 import { getRandomInt } from 'src/app/helpers/random';
 import { Card } from '../card/card';
-import { CardRank } from '../card/card-rank';
-import { CardSuit } from '../card/card-suit';
+import { CardRank, allRanksArray } from '../card/card-rank';
+import { CardSuit, allSuitsArray } from '../card/card-suit';
 
 export class Deck {
     private cards: Card[] = [];
@@ -11,8 +11,8 @@ export class Deck {
     }
 
     private fillDeckInOrder(): void {
-        Card.ranks.forEach((rank: CardRank) =>
-            Card.suits.forEach((suit: CardSuit) => this.cards.push(new Card(rank, suit))),
+        allRanksArray.forEach((rank: CardRank) =>
+            allSuitsArray.forEach((suit: CardSuit) => this.cards.push(new Card(rank, suit))),
         );
     }
 

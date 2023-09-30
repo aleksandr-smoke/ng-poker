@@ -1,0 +1,21 @@
+<tui-input-files
+    [formControl]="fileControl"
+    accept=".txt"
+></tui-input-files>
+
+<tui-files class="tui-space_top-1">
+    <tui-file
+        *ngIf="selectedFile$ | async as file"
+        [file]="file"
+        [showDelete]="fileControl.enabled"
+        (removed)="removeFile()"
+    ></tui-file>
+
+    <tui-file
+        *ngIf="rejectedFile$ | async as file"
+        [file]="file"
+        state="error"
+    ></tui-file>
+</tui-files>
+
+<pre class="tui-space_top-3">{{ textReaded$ | async }}</pre>

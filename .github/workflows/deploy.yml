@@ -27,5 +27,5 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.VPS_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc -i --delete"
           SOURCE: "dist/ng-poker/"
-          TARGET: "/root/poker/nginx/poker"
+          TARGET: "/root/web/nginx/poker"
         if: github.event_name != 'pull_request'

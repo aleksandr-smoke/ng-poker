@@ -11,11 +11,12 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ng-poker",
+            "outputPath": {
+              "base": "dist/ng-poker"
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -30,12 +31,13 @@
               }
             ],
             "styles": [
-              "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less",
-              "node_modules/@taiga-ui/core/styles/taiga-ui-fonts.less",
-              "node_modules/@taiga-ui/styles/taiga-ui-global.less",
+              "@taiga-ui/core/styles/taiga-ui-theme.less",
+              "@taiga-ui/core/styles/taiga-ui-fonts.less",
+              "@taiga-ui/styles/taiga-ui-global.less",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "browser": "src/main.ts"
           },
           "configurations": {
             "production": {
@@ -54,9 +56,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ng-poker:build:production"
+              "buildTarget": "ng-poker:build:production"
             },
             "development": {
-              "browserTarget": "ng-poker:build:development"
+              "buildTarget": "ng-poker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-poker:build"
+            "buildTarget": "ng-poker:build"
           }
         },
         "test": {

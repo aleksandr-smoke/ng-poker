@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ng-poker:build:production"
+              "buildTarget": "ng-poker:build:production"
             },
             "development": {
-              "browserTarget": "ng-poker:build:development"
+              "buildTarget": "ng-poker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-poker:build"
+            "buildTarget": "ng-poker:build"
           }
         },
         "test": {

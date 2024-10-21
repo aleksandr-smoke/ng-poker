@@ -1,8 +1,7 @@
-import { NgDompurifySanitizer } from "@tinkoff/ng-dompurify";
-import { TUI_SANITIZER, TuiButtonModule } from "@taiga-ui/core";
+import { TuiFiles } from "@taiga-ui/kit";
+import { TuiButton } from "@taiga-ui/core";
 import { NgModule } from '@angular/core';
 import { ImportComponent } from './import.component';
-import { TuiInputFilesModule } from '@taiga-ui/kit';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -13,11 +12,9 @@ import { CommonModule } from '@angular/common';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        TuiInputFilesModule,
-        TuiButtonModule,
+        TuiButton,
+        ...TuiFiles,
     ],
-    providers: [
-        { provide: TUI_SANITIZER, useClass: NgDompurifySanitizer },
-    ],
+    providers: [],
 })
 export class ParserModule {}

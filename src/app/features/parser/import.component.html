@@ -1,14 +1,17 @@
-<tui-input-files
-    [formControl]="fileControl"
-    accept=".txt"
-></tui-input-files>
+<label tuiInputFiles>
+    <input
+        accept=".txt"
+        tuiInputFiles
+        [formControl]="fileControl"
+    />
+</label>
 
 <tui-files class="tui-space_top-1">
     <tui-file
         *ngIf="selectedFile$ | async as file"
         [file]="file"
         [showDelete]="fileControl.enabled"
-        (removed)="removeFile()"
+        (remove)="removeFile()"
     ></tui-file>
 
     <tui-file
